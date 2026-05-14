@@ -65,8 +65,8 @@
 						"exec": [
 							"var response = pm.response.json();\r",
 							"tests[\"tc1 : Response Code should be 200\"] = responseCode.code == 200;\r",
-							"tests[\"TC2 : ID should be 8462397\"] = response.id == 8462397;\r",
-							"tests[\"TC3 : Name should be Devi Kapoor IV\"] = response.name == \"Devi Kapoor IV\";\r",
+							"tests[\"TC2 : ID should be 8462392\"] = response.id == 8462392;\r",
+							"tests[\"TC3 : Name should be Kanaka Mehra\"] = response.name == \"Kanaka Mehra\";\r",
 							""
 						],
 						"type": "text/javascript",
@@ -88,7 +88,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "{{baseurl}}/users/8465329"
+				"url": "{{baseurl}}/users/8462392"
 			},
 			"response": []
 		},
