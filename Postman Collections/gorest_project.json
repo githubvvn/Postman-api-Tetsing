@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "6ee3cb7c-460d-4e28-91ab-f24fa23ef677",
+		"name": "gorest project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9867a782-d0bd-463b-bd06-af21c2b4ce33",
+						"exec": [
+							"var response = JSON.parse(responseBody);",
+							"tests[\"TC1 : test status code is 200\"] = responseCode.code == 200 ;",
+							"tests[\"TC2 : check data present\"] = responseBody.has(\"data\");",
+							"tests[\"TC3 : check pages is 293\"] = responseBody.has(\"293\");",
+							"tests[\"TC4 : check pages = 293 via locator\"] = response.meta.pagination.pages == 293;",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"id": "9605ec96-c0a0-45c5-8675-6bc750841374",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "f57eb64027eaf378a4d8539af9c76784a7d57ca24a1d1fd1cfda5d6d883df8e1"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://gorest.co.in/public/v1/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get single user data",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2ec3d764-5c37-487a-bd06-b2f9c0f9778d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "510f8ba1-bc40-4789-8728-090f8fd4b16e",
+						"exec": [
+							"var response = pm.response.json();\r",
+							"tests[\"tc1 : Response Code should be 200\"] = responseCode.code == 200;\r",
+							"tests[\"TC2 : ID should be 8462397\"] = response.id == 8462397;\r",
+							"tests[\"TC3 : Name should be Devi Kapoor IV\"] = response.name == \"Devi Kapoor IV\";\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"id": "20c820ef-51ac-4825-bd5f-7c48a1e53a87",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "f57eb64027eaf378a4d8539af9c76784a7d57ca24a1d1fd1cfda5d6d883df8e1"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{baseurl}}/users/8465329"
+			},
+			"response": []
+		},
+		{
+			"name": "Post/ create new user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7cbcc6db-35ff-429c-bd33-f6b89092ce18",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"tc1\"] = responseBody.has(\"id\");"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"id": "53b7d9c1-3f53-4b4a-8bc6-31e06b7fd748",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "f57eb64027eaf378a4d8539af9c76784a7d57ca24a1d1fd1cfda5d6d883df8e1"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"el\", \"email\": \"el1@hawkings.com\", \"gender\": \"female\", \"status\": \"inactive\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseurl}}/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "aa8d98ab-edbd-416d-8141-082496d81e68",
+						"exec": [
+							"pm.response.to.have.status(204);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"id": "bfcbab38-7207-4298-9649-1b116f50b865",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "f57eb64027eaf378a4d8539af9c76784a7d57ca24a1d1fd1cfda5d6d883df8e1"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseurl}}/users/8465329"
+			},
+			"response": []
+		},
+		{
+			"name": "Put/Update created user data",
+			"id": "e51c478f-7f77-4bbc-b424-0ef69193dffa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "f57eb64027eaf378a4d8539af9c76784a7d57ca24a1d1fd1cfda5d6d883df8e1"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"el\", \"status\": \"active\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseurl}}/users/8465329"
+			},
+			"response": []
+		}
+	]
+}
