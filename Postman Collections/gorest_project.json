@@ -139,49 +139,6 @@
 			"response": []
 		},
 		{
-			"name": "Delete user data",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "aa8d98ab-edbd-416d-8141-082496d81e68",
-						"exec": [
-							"var response = JSON.parse(responseBody);\r",
-							"responseCode.code == 204;"
-						],
-						"type": "text/javascript",
-						"packages": {},
-						"requests": {}
-					}
-				}
-			],
-			"id": "bfcbab38-7207-4298-9649-1b116f50b865",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": {
-						"token": "f57eb64027eaf378a4d8539af9c76784a7d57ca24a1d1fd1cfda5d6d883df8e1"
-					}
-				},
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "{{baseurl}}/users/{{UID}}"
-			},
-			"response": []
-		},
-		{
 			"name": "Put/Update created user data",
 			"id": "e51c478f-7f77-4bbc-b424-0ef69193dffa",
 			"protocolProfileBehavior": {
@@ -205,7 +162,7 @@
 						}
 					}
 				},
-				"url": "{{baseurl}}/users/8465329"
+				"url": "{{baseurl}}/users/{{UID}}"
 			},
 			"response": []
 		},
@@ -223,6 +180,40 @@
 					}
 				},
 				"method": "GET",
+				"header": [],
+				"url": "{{baseurl}}/users/{{UID}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete created user data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "77789fae-9cea-467b-a360-7760215270f7",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"responseCode.code == 204;"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"id": "24604d92-a3ac-4ad8-89c6-758e8ceb3e53",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "f57eb64027eaf378a4d8539af9c76784a7d57ca24a1d1fd1cfda5d6d883df8e1"
+					}
+				},
+				"method": "DELETE",
 				"header": [],
 				"url": "{{baseurl}}/users/{{UID}}"
 			},
