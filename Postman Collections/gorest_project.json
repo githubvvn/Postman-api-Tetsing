@@ -140,6 +140,22 @@
 		},
 		{
 			"name": "Put/Update created user data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "944e8c92-f404-4ac7-aecd-edf039c9156c",
+						"exec": [
+							"/*var response = JSON.parse(responseBody);\r",
+							"var id = response.id;\r",
+							"console.log(id);*/"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
 			"id": "e51c478f-7f77-4bbc-b424-0ef69193dffa",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
