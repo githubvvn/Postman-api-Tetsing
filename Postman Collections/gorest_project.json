@@ -101,7 +101,10 @@
 						"id": "7cbcc6db-35ff-429c-bd33-f6b89092ce18",
 						"exec": [
 							"var response = JSON.parse(responseBody);\r",
-							"tests[\"tc1\"] = responseBody.has(\"id\");"
+							"tests[\"tc1\"] = responseBody.has(\"id\");\r",
+							"const id = response.id;\r",
+							"pm.collectionVariables.set(\"UID\", id);\r",
+							"console.log(id);"
 						],
 						"type": "text/javascript",
 						"packages": {},
@@ -204,6 +207,24 @@
 				"url": "{{baseurl}}/users/8465329"
 			},
 			"response": []
+		},
+		{
+			"name": "get updated user data",
+			"id": "7424c968-db30-43b2-a6ea-01354c73d733",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "UID",
+			"value": ""
 		}
 	]
 }
