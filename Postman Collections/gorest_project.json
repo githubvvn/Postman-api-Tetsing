@@ -15,7 +15,7 @@
 						"exec": [
 							"var response = JSON.parse(responseBody);",
 							"tests[\"TC1 : test status code is 200\"] = responseCode.code == 200 ;",
-							"tests[\"TC2 : check data present\"] = responseBody.has(\"data\");",
+							"tests[\"TC2 : check data present\"] = responseBody.has(\"8466625\");",
 							"tests[\"TC3 : check pages is 293\"] = responseBody.has(\"293\");",
 							"tests[\"TC4 : check pages = 293 via locator\"] = response.meta.pagination.pages == 293;",
 							""
