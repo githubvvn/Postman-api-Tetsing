@@ -215,8 +215,15 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "f57eb64027eaf378a4d8539af9c76784a7d57ca24a1d1fd1cfda5d6d883df8e1"
+					}
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "{{baseurl}}/users/{{UID}}"
 			},
 			"response": []
 		}
