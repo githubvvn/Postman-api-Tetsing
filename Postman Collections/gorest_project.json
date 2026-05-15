@@ -146,7 +146,7 @@
 					"script": {
 						"id": "aa8d98ab-edbd-416d-8141-082496d81e68",
 						"exec": [
-							"var response = pm.parse(responseBody);\r",
+							"var response = JSON.parse(responseBody);\r",
 							"responseCode.code == 204;"
 						],
 						"type": "text/javascript",
