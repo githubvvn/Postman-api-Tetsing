@@ -124,7 +124,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \"name\": \"el\", \"email\": \"el1@hawkings.com\", \"gender\": \"female\", \"status\": \"inactive\" }",
+					"raw": "{\r\n  \"name\": \"{{$randomFullName}}\",\r\n  \"email\": \"{{$randomEmail}}\",\r\n  \"gender\": \"female\",\r\n  \"status\": \"inactive\"}",
 					"options": {
 						"raw": {
 							"language": "json"
