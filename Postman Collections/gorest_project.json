@@ -146,7 +146,8 @@
 					"script": {
 						"id": "aa8d98ab-edbd-416d-8141-082496d81e68",
 						"exec": [
-							"pm.response.to.have.status(204);"
+							"var response = pm.parse(responseBody);\r",
+							"responseCode.code == 204;"
 						],
 						"type": "text/javascript",
 						"packages": {},
@@ -176,7 +177,7 @@
 						}
 					}
 				},
-				"url": "{{baseurl}}/users/8465329"
+				"url": "{{baseurl}}/users/{{UID}}"
 			},
 			"response": []
 		},
