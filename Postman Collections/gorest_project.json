@@ -197,7 +197,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "{{baseurl}}/users/{{UID}}"
+				"url": "{{baseurl}}/users/8466625"
 			},
 			"response": []
 		},
