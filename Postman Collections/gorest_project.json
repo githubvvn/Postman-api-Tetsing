@@ -225,8 +225,10 @@
 					"script": {
 						"id": "77789fae-9cea-467b-a360-7760215270f7",
 						"exec": [
-							"var response = JSON.parse(responseBody);\r",
-							"responseCode.code == 204;"
+							"pm.test(\"Status code is 204 No Content\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {},
