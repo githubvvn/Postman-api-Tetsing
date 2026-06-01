@@ -65,8 +65,8 @@
 						"exec": [
 							"var response = pm.response.json();\r",
 							"tests[\"tc1 : Response Code should be 200\"] = responseCode.code == 200;\r",
-							"tests[\"TC2 : ID should be 8466600\"] = response.id == 8466600;\r",
-							"tests[\"TC3 : Name should be Roberta Prohaska\"] = response.name == \"Roberta Prohaska\";\r",
+							"tests[\"TC2 : ID should be 8486447\"] = response.id == 8486447;\r",
+							"tests[\"TC3 : Name should be surya\"] = response.name == \"surya\";\r",
 							""
 						],
 						"type": "text/javascript",
@@ -171,7 +171,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \"name\": \"el\", \"status\": \"active\" }",
+					"raw": "{ \"name\": \"surya\", \"status\": \"active\" }",
 					"options": {
 						"raw": {
 							"language": "json"
