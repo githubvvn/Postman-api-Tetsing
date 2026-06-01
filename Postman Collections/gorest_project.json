@@ -88,7 +88,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "{{baseurl}}/users/8466600"
+				"url": "{{baseurl}}/users/8486447"
 			},
 			"response": []
 		},
@@ -190,7 +190,9 @@
 					"script": {
 						"id": "21dea505-270e-478a-a7b7-c4594f956276",
 						"exec": [
-							"//dchgd}"
+							"var response = pm.response.json();\r",
+							"tests[\"TC3 : Name should be surya\"] = response.name == \"surya\";\r",
+							"tests[\"TC3 : Name should be inactive\"] = response.status == \"inactive\";"
 						],
 						"type": "text/javascript",
 						"packages": {},
@@ -211,7 +213,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "{{baseurl}}/users/8466625"
+				"url": "{{baseurl}}/users/8486447"
 			},
 			"response": []
 		},
@@ -245,7 +247,7 @@
 				},
 				"method": "DELETE",
 				"header": [],
-				"url": "{{baseurl}}/users/{{UID}}"
+				"url": "{{baseurl}}/users/8486447"
 			},
 			"response": []
 		}
