@@ -191,8 +191,8 @@
 						"id": "21dea505-270e-478a-a7b7-c4594f956276",
 						"exec": [
 							"var response = pm.response.json();\r",
-							"tests[\"TC3 : Name should be surya\"] = response.name == \"surya\";\r",
-							"tests[\"TC3 : Name should be inactive\"] = response.status == \"inactive\";"
+							"tests[\"TC3 : Name should be rama\"] = response.name == \"rama\";\r",
+							"tests[\"TC3 : status should be inactive\"] = response.status == \"inactive\";"
 						],
 						"type": "text/javascript",
 						"packages": {},
