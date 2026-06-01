@@ -65,8 +65,8 @@
 						"exec": [
 							"var response = pm.response.json();\r",
 							"tests[\"tc1 : Response Code should be 200\"] = responseCode.code == 200;\r",
-							"tests[\"TC2 : ID should be 8486447\"] = response.id == 8486447;\r",
-							"tests[\"TC3 : Name should be surya\"] = response.name == \"surya\";\r",
+							"tests[\"TC2 : ID should be 8486444\"] = response.id == 8486444;\r",
+							"tests[\"TC3 : Name should be rama\"] = response.name == \"rama\";\r",
 							""
 						],
 						"type": "text/javascript",
@@ -88,7 +88,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "{{baseurl}}/users/8486447"
+				"url": "{{baseurl}}/users/8486444"
 			},
 			"response": []
 		},
@@ -171,14 +171,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \"name\": \"surya\", \"status\": \"active\" }",
+					"raw": "{ \"name\": \"rama\", \"status\": \"inactive\" }",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{baseurl}}/users/{{UID}}"
+				"url": "{{baseurl}}/users/8486444"
 			},
 			"response": []
 		},
@@ -213,7 +213,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "{{baseurl}}/users/8486447"
+				"url": "{{baseurl}}/users/8486444"
 			},
 			"response": []
 		},
@@ -249,7 +249,7 @@
 				},
 				"method": "DELETE",
 				"header": [],
-				"url": "{{baseurl}}/users/8486447"
+				"url": "{{baseurl}}/users/8486444"
 			},
 			"response": []
 		}
